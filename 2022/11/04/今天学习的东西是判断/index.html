@@ -14,7 +14,7 @@
 <meta property="og:description" content="1.判断的语句形式： if(OK){……..}else{}    if(){}else if(){}else{}">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2022-11-04T00:59:36.000Z">
-<meta property="article:modified_time" content="2022-11-04T04:37:04.000Z">
+<meta property="article:modified_time" content="2022-11-04T04:51:34.000Z">
 <meta property="article:author" content="rosezsun">
 <meta property="article:tag" content="C基础 判断 预先设置再判断">
 <meta name="twitter:card" content="summary">
@@ -113,6 +113,18 @@
 <ol start="5">
 <li>switch-case<br>注意这个东西是从头到尾的执行。如果无视case是全部顺序的，case是一个执行的开始而已。<br>switch(t整型int){<br> case 1：…; break;<br> case 2(整数，常量const)：…; break;<br> default：…;<br>}</li>
 </ol>
+<p>int main()<br>{<br>    int x;<br>    scanf(“%d”,&amp;x);</p>
+<pre><code>int f = 0;
+switch(x&lt;=0)&#123;
+    case 1: f = -(x!=0);break;
+    default: f = 2*x;
+&#125;
+
+printf(&quot;%d&quot;,f);
+
+return 0;
+</code></pre>
+<p>}</p>
 
       
     </div>
