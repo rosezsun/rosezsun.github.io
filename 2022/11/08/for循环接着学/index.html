@@ -4,14 +4,19 @@
   <meta charset="utf-8">
   
   
-  <title>Archives: 2022 | ROSE</title>
+  <title>for循环接着学 | ROSE</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="ROSE">
-<meta property="og:url" content="http://rosezsun.github.io/archives/2022/index.html">
+  <meta name="description" content="for&#x3D;&#x3D;while，都是先判断再做循环体。对！就是说，可以等价的！那种没有固定次数的完全可以改for的判断条件，不用循环变量i来判断不就结了。  2.如果不引入break和continue的话，可以用一种证伪的思想，体现否定，然后只要有一个条件改变，它就是一直是错的。这样最后flag也可以保持自我。 3.试了一下，break只能在循环和switch里面用，continue只">
+<meta property="og:type" content="article">
+<meta property="og:title" content="for循环接着学">
+<meta property="og:url" content="http://rosezsun.github.io/2022/11/08/for%E5%BE%AA%E7%8E%AF%E6%8E%A5%E7%9D%80%E5%AD%A6/index.html">
 <meta property="og:site_name" content="ROSE">
+<meta property="og:description" content="for&#x3D;&#x3D;while，都是先判断再做循环体。对！就是说，可以等价的！那种没有固定次数的完全可以改for的判断条件，不用循环变量i来判断不就结了。  2.如果不引入break和continue的话，可以用一种证伪的思想，体现否定，然后只要有一个条件改变，它就是一直是错的。这样最后flag也可以保持自我。 3.试了一下，break只能在循环和switch里面用，continue只">
 <meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2022-11-08T14:16:41.000Z">
+<meta property="article:modified_time" content="2022-11-08T15:13:54.000Z">
 <meta property="article:author" content="rosezsun">
+<meta property="article:tag" content="goto">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternate" href="/atom.xml" title="ROSE" type="application/atom+xml">
@@ -69,153 +74,71 @@
 </header>
 
       <div class="outer">
-        <section id="main">
-  
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2022" class="archive-year">2022</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2022/11/09/%E4%B8%80%E7%82%B9%E7%82%B9%E6%83%B3%E8%A6%81%E5%90%90%E5%87%BA%E6%9D%A5%E7%9A%84%E8%AF%9D/" class="archive-article-date">
-  <time class="dt-published" datetime="2022-11-09T11:03:40.000Z" itemprop="datePublished">Nov 9</time>
+        <section id="main"><article id="post-for循环接着学" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2022/11/08/for%E5%BE%AA%E7%8E%AF%E6%8E%A5%E7%9D%80%E5%AD%A6/" class="article-date">
+  <time class="dt-published" datetime="2022-11-08T14:16:41.000Z" itemprop="datePublished">2022-11-08</time>
 </a>
-      
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2022/11/09/%E4%B8%80%E7%82%B9%E7%82%B9%E6%83%B3%E8%A6%81%E5%90%90%E5%87%BA%E6%9D%A5%E7%9A%84%E8%AF%9D/">一点点想要吐出来的话</a>
+    <h1 class="p-name article-title" itemprop="headline name">
+      for循环接着学
     </h1>
   
 
-    </header>
-  </div>
-</article>
-  
+      </header>
     
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2022/11/08/for%E5%BE%AA%E7%8E%AF%E6%8E%A5%E7%9D%80%E5%AD%A6/" class="archive-article-date">
-  <time class="dt-published" datetime="2022-11-08T14:16:41.000Z" itemprop="datePublished">Nov 8</time>
-</a>
+    <div class="e-content article-entry" itemprop="articleBody">
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2022/11/08/for%E5%BE%AA%E7%8E%AF%E6%8E%A5%E7%9D%80%E5%AD%A6/">for循环接着学</a>
-    </h1>
-  
+        <ol>
+<li>for&#x3D;&#x3D;while，都是先判断再做循环体。<br>对！就是说，可以等价的！那种没有固定次数的完全可以改for的判断条件，不用循环变量i来判断不就结了。</li>
+</ol>
+<p>2.如果不引入break和continue的话，可以用一种证伪的思想，体现否定，然后只要有一个条件改变，它就是一直是错的。这样最后flag也可以保持自我。</p>
+<p>3.试了一下，break只能在循环和switch里面用，continue只能在循环里用。（想跳过if的后续步骤看来是不行的）</p>
+<p>4.跳出多重循环：就是那个1、2、5角钱凑10块的那种<br>4.1接力break<br>4.2goto</p>
+<p>5.重点cue一下goto，因为几乎不用，但是确实，像上面那种就是goto是最有效简洁的方法。</p>
+<p>goto label；&#x2F;&#x2F;跳到label<br>label：</p>
 
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2022/11/07/%E5%BE%AA%E7%8E%AF%E5%BE%AA%E7%8E%AF%E5%BE%AA%E7%8E%AF-%E5%89%A7%E6%9C%AC%E6%9D%80%E7%9C%9F%E5%A5%BD%E7%8E%A9/" class="archive-article-date">
-  <time class="dt-published" datetime="2022-11-07T14:52:35.000Z" itemprop="datePublished">Nov 7</time>
-</a>
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2022/11/07/%E5%BE%AA%E7%8E%AF%E5%BE%AA%E7%8E%AF%E5%BE%AA%E7%8E%AF-%E5%89%A7%E6%9C%AC%E6%9D%80%E7%9C%9F%E5%A5%BD%E7%8E%A9/">循环循环循环...剧本杀真好玩~</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2022/11/04/%E4%BB%8A%E5%A4%A9%E5%AD%A6%E4%B9%A0%E7%9A%84%E4%B8%9C%E8%A5%BF%E6%98%AF%E5%88%A4%E6%96%AD/" class="archive-article-date">
-  <time class="dt-published" datetime="2022-11-04T00:59:36.000Z" itemprop="datePublished">Nov 4</time>
-</a>
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://rosezsun.github.io/2022/11/08/for%E5%BE%AA%E7%8E%AF%E6%8E%A5%E7%9D%80%E5%AD%A6/" data-id="cla9n1w05000000w10k8j5gpq" data-title="for循环接着学" class="article-share-link">Share</a>
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2022/11/04/%E4%BB%8A%E5%A4%A9%E5%AD%A6%E4%B9%A0%E7%9A%84%E4%B8%9C%E8%A5%BF%E6%98%AF%E5%88%A4%E6%96%AD/">今天学习的东西是判断</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2022/11/03/%E7%AC%AC%E4%BA%8C%E5%91%A8-%E5%8F%98%E9%87%8F-%E7%AC%94%E8%AE%B0/" class="archive-article-date">
-  <time class="dt-published" datetime="2022-11-03T02:19:02.000Z" itemprop="datePublished">Nov 3</time>
-</a>
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2022/11/03/%E7%AC%AC%E4%BA%8C%E5%91%A8-%E5%8F%98%E9%87%8F-%E7%AC%94%E8%AE%B0/">第二周-变量-笔记</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2022/11/02/%E7%BF%81%E6%81%BA%E8%80%81%E5%B8%88%E7%9A%84C%E8%AF%AD%E8%A8%80%E7%AC%AC%E4%B8%80%E6%AC%A1%E6%85%95%E8%AF%BE/" class="archive-article-date">
-  <time class="dt-published" datetime="2022-11-02T01:55:03.000Z" itemprop="datePublished">Nov 2</time>
-</a>
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2022/11/02/%E7%BF%81%E6%81%BA%E8%80%81%E5%B8%88%E7%9A%84C%E8%AF%AD%E8%A8%80%E7%AC%AC%E4%B8%80%E6%AC%A1%E6%85%95%E8%AF%BE/">翁恺老师的C语言第一次慕课</a>
-    </h1>
-  
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/goto/" rel="tag">goto</a></li></ul>
 
-    </header>
+    </footer>
   </div>
-</article>
   
     
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2022/11/01/%E7%BB%88%E4%BA%8E%E5%8F%AF%E4%BB%A5%E5%8F%91%E5%B8%83%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2%E4%BA%86/" class="archive-article-date">
-  <time class="dt-published" datetime="2022-11-01T07:37:43.000Z" itemprop="datePublished">Nov 1</time>
-</a>
-      
+<nav id="article-nav">
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2022/11/01/%E7%BB%88%E4%BA%8E%E5%8F%AF%E4%BB%A5%E5%8F%91%E5%B8%83%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2%E4%BA%86/">终于可以发布第一篇博客了</a>
-    </h1>
+    <a href="/2022/11/09/%E4%B8%80%E7%82%B9%E7%82%B9%E6%83%B3%E8%A6%81%E5%90%90%E5%87%BA%E6%9D%A5%E7%9A%84%E8%AF%9D/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          一点点想要吐出来的话
+        
+      </div>
+    </a>
   
+  
+    <a href="/2022/11/07/%E5%BE%AA%E7%8E%AF%E5%BE%AA%E7%8E%AF%E5%BE%AA%E7%8E%AF-%E5%89%A7%E6%9C%AC%E6%9D%80%E7%9C%9F%E5%A5%BD%E7%8E%A9/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">循环循环循环...剧本杀真好玩~</div>
+    </a>
+  
+</nav>
 
-    </header>
-  </div>
+  
 </article>
-  
-  
-    </div></section>
-  
 
 
 </section>
