@@ -4,14 +4,19 @@
   <meta charset="utf-8">
   
   
-  <title>Archives: 2022/12 | ROSE</title>
+  <title>数组，first class | ROSE</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="ROSE">
-<meta property="og:url" content="http://rosezsun.github.io/archives/2022/12/index.html">
+  <meta name="description" content="1.数组的定义：int num[100];类型 数组名[个数]；&#x2F;&#x2F;index从0开始计数对于这个个数，C99之前不能使用变量来定义，但是之后都是可以了。比如我在自己的dev上尝试的：int b&#x3D;7;int num[b];">
+<meta property="og:type" content="article">
+<meta property="og:title" content="数组，first class">
+<meta property="og:url" content="http://rosezsun.github.io/2022/12/11/%E6%95%B0%E7%BB%84%EF%BC%8Cfirst-class/index.html">
 <meta property="og:site_name" content="ROSE">
+<meta property="og:description" content="1.数组的定义：int num[100];类型 数组名[个数]；&#x2F;&#x2F;index从0开始计数对于这个个数，C99之前不能使用变量来定义，但是之后都是可以了。比如我在自己的dev上尝试的：int b&#x3D;7;int num[b];">
 <meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2022-12-11T04:46:15.000Z">
+<meta property="article:modified_time" content="2022-12-11T06:31:16.000Z">
 <meta property="article:author" content="rosezsun">
+<meta property="article:tag" content="C基础 数组">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternate" href="/atom.xml" title="ROSE" type="application/atom+xml">
@@ -69,58 +74,64 @@
 </header>
 
       <div class="outer">
-        <section id="main">
-  
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2022" class="archive-year">2022</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2022/12/11/%E6%95%B0%E7%BB%84%EF%BC%8Cfirst-class/" class="archive-article-date">
-  <time class="dt-published" datetime="2022-12-11T04:46:15.000Z" itemprop="datePublished">Dec 11</time>
+        <section id="main"><article id="post-数组，first-class" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2022/12/11/%E6%95%B0%E7%BB%84%EF%BC%8Cfirst-class/" class="article-date">
+  <time class="dt-published" datetime="2022-12-11T04:46:15.000Z" itemprop="datePublished">2022-12-11</time>
 </a>
-      
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2022/12/11/%E6%95%B0%E7%BB%84%EF%BC%8Cfirst-class/">数组，first class</a>
+    <h1 class="p-name article-title" itemprop="headline name">
+      数组，first class
     </h1>
   
 
-    </header>
-  </div>
-</article>
-  
+      </header>
     
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2022/12/08/%E5%87%BD%E6%95%B0%EF%BC%81%E8%A2%AB%E5%91%BC%E5%99%9C%E5%A3%B0%E5%90%B5%E5%BE%97%E7%9D%A1%E4%B8%8D%E7%9D%80%E7%88%AC%E8%B5%B7%E6%9D%A5%E5%AD%A6%E4%B9%A0/" class="archive-article-date">
-  <time class="dt-published" datetime="2022-12-08T07:28:18.000Z" itemprop="datePublished">Dec 8</time>
-</a>
+    <div class="e-content article-entry" itemprop="articleBody">
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2022/12/08/%E5%87%BD%E6%95%B0%EF%BC%81%E8%A2%AB%E5%91%BC%E5%99%9C%E5%A3%B0%E5%90%B5%E5%BE%97%E7%9D%A1%E4%B8%8D%E7%9D%80%E7%88%AC%E8%B5%B7%E6%9D%A5%E5%AD%A6%E4%B9%A0/">函数！被呼噜声吵得睡不着爬起来学习</a>
-    </h1>
-  
+        <p>1.数组的定义：<br>int num[100];<br>类型 数组名[个数]；&#x2F;&#x2F;index从0开始计数<br>对于这个个数，C99之前不能使用变量来定义，但是之后都是可以了。比如我在自己的dev上尝试的：<br>int b&#x3D;7;<br>int num[b];</p>
+<span id="more"></span>
+<p>OK，是可以通过编译而且并没有警告和错误。但是这个数组定义的维度好像就没有意义了。我改变b的大小，然后输出一个超出维度的数组index，但是没有报错而且输出的是0。而且我使用了不用变量定义的方式来做，也是一样的不报错。好奇怪啊，都可以编译通过。难道这个数组的维数是用来约束自己的吗？</p>
+<p>2.数组的隐患？越界。这个东西就是上面说的，编译器不会检查这个东西，需要程序员保证有效范围在[0,n-1]的下标使用。</p>
+<p>3.左值和右值，在赋值符号&#x3D;左右的值。</p>
+<p>4.长度为0的数组？可以，但是没有用hhhhh   int a[0];</p>
+<p>5.const int num&#x3D;10;  &#x2F;&#x2F;常量的定义</p>
+<ol start="6">
+<li>数组大小——定义数组——初始化数组——参与运算——输出</li>
+</ol>
 
-    </header>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://rosezsun.github.io/2022/12/11/%E6%95%B0%E7%BB%84%EF%BC%8Cfirst-class/" data-id="clbk3yhsq00008ow1fnnghecd" data-title="数组，first class" class="article-share-link">Share</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/C%E5%9F%BA%E7%A1%80-%E6%95%B0%E7%BB%84/" rel="tag">C基础 数组</a></li></ul>
+
+    </footer>
   </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2022/12/08/%E5%87%BD%E6%95%B0%EF%BC%81%E8%A2%AB%E5%91%BC%E5%99%9C%E5%A3%B0%E5%90%B5%E5%BE%97%E7%9D%A1%E4%B8%8D%E7%9D%80%E7%88%AC%E8%B5%B7%E6%9D%A5%E5%AD%A6%E4%B9%A0/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">函数！被呼噜声吵得睡不着爬起来学习</div>
+    </a>
+  
+</nav>
+
+  
 </article>
-  
-  
-    </div></section>
-  
 
 
 </section>
