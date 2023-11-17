@@ -4,14 +4,20 @@
   <meta charset="utf-8">
   
   
-  <title>Tag: 安装 | Hexo</title>
+  <title>网页：html基础 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://example.com/tags/%E5%AE%89%E8%A3%85/index.html">
+  <meta name="description" content="目标是写一个可以运行的网站，需要具备前端和后端能力。因为从来没有接触过，关于网络的东西都很难理解。W3C设计要求，网页遵循  结构——HTML；表现——CSS；行为——Javascript。这三个都是前端的东西，但是这样分开的话，很好理解个部分的责任。Tom Berners-Lee开发了html，还有http，url等等，都是网络相关的知识。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="网页：html基础">
+<meta property="og:url" content="http://example.com/2023/11/14/2023-11-14-%E7%BD%91%E9%A1%B5%EF%BC%9Ahtml%E5%9F%BA%E7%A1%80/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="目标是写一个可以运行的网站，需要具备前端和后端能力。因为从来没有接触过，关于网络的东西都很难理解。W3C设计要求，网页遵循  结构——HTML；表现——CSS；行为——Javascript。这三个都是前端的东西，但是这样分开的话，很好理解个部分的责任。Tom Berners-Lee开发了html，还有http，url等等，都是网络相关的知识。">
 <meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2023-11-14T02:46:11.000Z">
+<meta property="article:modified_time" content="2023-11-17T02:41:46.621Z">
 <meta property="article:author" content="John Doe">
+<meta property="article:tag" content="网页制作">
+<meta property="article:tag" content="HTML">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
@@ -71,39 +77,76 @@
 </header>
 
       <div class="outer">
-        <section id="main">
-  
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2023" class="archive-year">2023</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2023/03/29/2023-03-29-JAVA%E9%9B%B6%E5%9F%BA%E7%A1%80/" class="archive-article-date">
-  <time class="dt-published" datetime="2023-03-29T03:03:58.000Z" itemprop="datePublished">Mar 29</time>
+        <section id="main"><article id="post-2023-11-14-网页：html基础" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2023/11/14/2023-11-14-%E7%BD%91%E9%A1%B5%EF%BC%9Ahtml%E5%9F%BA%E7%A1%80/" class="article-date">
+  <time class="dt-published" datetime="2023-11-14T02:46:11.000Z" itemprop="datePublished">2023-11-14</time>
 </a>
-      
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2023/03/29/2023-03-29-JAVA%E9%9B%B6%E5%9F%BA%E7%A1%80/">JAVA零基础</a>
+    <h1 class="p-name article-title" itemprop="headline name">
+      网页：html基础
     </h1>
   
 
-    </header>
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>目标是写一个可以运行的网站，需要具备前端和后端能力。因为从来没有接触过，关于网络的东西都很难理解。<br>W3C设计要求，网页遵循  结构——HTML；表现——CSS；行为——Javascript。这三个都是前端的东西，但是这样分开的话，很好理解个部分的责任。<br>Tom Berners-Lee开发了html，还有http，url等等，都是网络相关的知识。</p>
+<span id="more"></span>
+
+<p>一、基本结构<br>三个标签：<html>、<head>、<body></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&lt;html&gt;预示着html文档的开始</span><br><span class="line">	&lt;head&gt;</span><br><span class="line">		头部信息，一些描述之类的</span><br><span class="line">	&lt;/head&gt;</span><br><span class="line">	&lt;body&gt;</span><br><span class="line">		主体信息，比如主页中需要什么内容、结构，放上去</span><br><span class="line">	&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;结束</span><br></pre></td></tr></table></figure>
+
+<p>二、基本语法<br>1.有始有终：&lt;&gt;a&lt;&#x2F;&gt;一对，这个a是元素；<br>2.属性：&lt;xxx 属性&#x3D;”a b c” shu2&#x3D;”a”&gt;，属性之间用空格，不同属性之间也是空格；属性有公共的也有私有的；而且不一定有值&lt;xxx 属性 shu2&gt;这样。<br>3.例如<tag>，是没有结束标签的。<br>4.保证文档结构信息的完整性。首行定义文档类型，<html>设置文档名字空间，<meta>定义编码写在<head>里面，<title>文档标题。<br>5.扩展名：.htm或者.html<br>6.注释<!--xxx--></p>
+<!-----------------
+多行注释
+----------------->
+
+<p>三、常用标签<br>1.&lt;h1…&gt;标题（几级标题）；<p>段落；</p>
+<p>2.由于在两个标签&lt;&gt;之间没有办法写尖括号，所以使用&lt;（这个是&lt;）&gt;（这个是&gt;）代替；</p>
+<p>3.字符格式标签，用来显示一定的效果。<b></b>加粗；<i></i>引用斜体；<blink></blink>闪烁文本；<big></big>放大文本；<small></small>缩小文本；<br><sup></sup>上标；<sub></sub>下标；<cite></cite>标识引用文本。<br>blink闪烁不闪，不知道是什么原因，可能因为没有配备属性？</p>
+<p>4.列表标签。<ul></ul>无序列表；<ol></ol>有序列表；<li></li>标识列表项目。</p>
+<li>一个一个排列下去；
+<ul>的表现就是<li>中没有数字序号，都是小圆点；<ol>是有序号的，<li>的表现都是1 2 3 4 ... 这样的
+
+<p>5.定义列表。<dl></dl>标识定义列表；<dt></dt>标识词条；<dd></dd>标识解释。这个呢就相当于序号可以定制了。</p>
+<p>6.链接标签<a></a><br><a href="网址">文字</a><br>也可以定位到网页中的某一部分，比如，在页面底部<span id="btm">底部锚点位置</span>，然后<a href="#btm">jump</a>，之后这个链接就可以跳转到span这里。</p>
+<p>7.多媒体标签：<img /> 、<embed></embed>、<object></object></p>
+<p>8.表格标签：<table></table>定义表格结构、<caption></caption>定义表格标题、<th></th>表头、<tr></tr>表格行、<td></td>定义表格单元。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2023/11/14/2023-11-14-%E7%BD%91%E9%A1%B5%EF%BC%9Ahtml%E5%9F%BA%E7%A1%80/" data-id="cloxr2phs0000yqw8eib52or1" data-title="网页：html基础" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/HTML/" rel="tag">HTML</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E7%BD%91%E9%A1%B5%E5%88%B6%E4%BD%9C/" rel="tag">网页制作</a></li></ul>
+
+    </footer>
   </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2023/11/14/2023-11-14-%E5%86%8D%E6%AC%A1%E5%BC%80%E5%A7%8Bhexo%E3%80%81%E8%AE%B0%E5%BD%95%E4%B8%80%E4%BA%9B%E9%85%8D%E7%BD%AE%E9%97%AE%E9%A2%98/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">再次开始hexo、记录一些配置问题</div>
+    </a>
+  
+</nav>
+
+  
 </article>
-  
-  
-    </div></section>
-  
 
 
 </section>
