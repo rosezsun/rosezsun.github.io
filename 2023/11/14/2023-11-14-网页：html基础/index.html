@@ -14,7 +14,7 @@
 <meta property="og:description" content="目标是写一个可以运行的网站，需要具备前端和后端能力。因为从来没有接触过，关于网络的东西都很难理解。W3C设计要求，网页遵循  结构——HTML；表现——CSS；行为——Javascript。这三个都是前端的东西，但是这样分开的话，很好理解个部分的责任。Tom Berners-Lee开发了html，还有http，url等等，都是网络相关的知识。">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2023-11-14T02:46:11.000Z">
-<meta property="article:modified_time" content="2023-11-20T03:42:33.519Z">
+<meta property="article:modified_time" content="2023-11-21T04:28:25.952Z">
 <meta property="article:author" content="John Doe">
 <meta property="article:tag" content="网页制作">
 <meta property="article:tag" content="HTML">
@@ -105,7 +105,7 @@
 <p>一、基本结构<br>三个标签：<html>、<head>、<body></p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&lt;html&gt;预示着html文档的开始</span><br><span class="line">	&lt;head&gt;</span><br><span class="line">		头部信息，一些描述之类的</span><br><span class="line">	&lt;/head&gt;</span><br><span class="line">	&lt;body&gt;</span><br><span class="line">		主体信息，比如主页中需要什么内容、结构，放上去</span><br><span class="line">	&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;结束</span><br></pre></td></tr></table></figure>
 
-<p>二、基本语法<br>1.有始有终：&lt;&gt;a&lt;&#x2F;&gt;一对，这个a是元素；<br>2.属性：&lt;xxx 属性&#x3D;”a b c” shu2&#x3D;”a”&gt;，属性之间用空格，不同属性之间也是空格；属性有公共的也有私有的；而且不一定有值&lt;xxx 属性 shu2&gt;这样。<br>3.例如<tag>，是没有结束标签的。<br>4.保证文档结构信息的完整性。首行定义文档类型，<html>设置文档名字空间，<meta>定义编码写在<head>里面，<title>文档标题。<br>5.扩展名：.htm或者.html<br>6.注释<!--xxx--></p>
+<p>二、基本语法<br>1.有始有终：&lt;&gt;a&lt;&#x2F;&gt;一对，这个a是元素；<br>2.属性：<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;xxx 属性=&quot;a b c&quot; shu2=&quot;a&quot;&gt;</span><br></pre></td></tr></table></figure>，属性之间用空格，不同属性之间也是空格；属性有公共的也有私有的；而且不一定有值<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;xxx 属性 shu2&gt;</span><br></pre></td></tr></table></figure>这样。<br>3.例如<tag>，是没有结束标签的。<br>4.保证文档结构信息的完整性。首行定义文档类型，<html>设置文档名字空间，<meta>定义编码写在<head>里面，<title>文档标题。<br>5.扩展名：.htm或者.html<br>6.注释<!--xxx--></p>
 <!-----------------
 多行注释
 ----------------->
@@ -118,15 +118,17 @@
 <ul>的表现就是<li>中没有数字序号，都是小圆点；<ol>是有序号的，<li>的表现都是1 2 3 4 ... 这样的
 
 <p>5.定义列表。<dl></dl>标识定义列表；<dt></dt>标识词条；<dd></dd>标识解释。这个呢就相当于序号可以定制了。</p>
-<p>6.链接标签<a></a><br><a href="网址">文字</a><br>也可以定位到网页中的某一部分，比如，在页面底部<span id="btm">底部锚点位置</span>，然后<a href="#btm">jump</a>，之后这个链接就可以跳转到span这里。</p>
+<p>6.链接标签<a></a><br><a href="网址">文字</a><br>也可以定位到网页中的某一部分，比如，在页面底部<span id="btm">底部锚点位置</span>，然后<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;a href=&quot;#btm&quot;&gt;jump&lt;/a&gt;</span><br></pre></td></tr></table></figure>，之后这个链接就可以跳转到span这里。</p>
 <p>7.多媒体标签：<img /> 、<embed></embed>、<object></object></p>
 <p>8.表格标签：<table></table>定义表格结构、<caption></caption>定义表格标题、<th></th>表头、<tr></tr>表格行、<td></td>定义表格单元。</p>
 <p>9.表单。所谓表单，大概就是用户可以交互、下拉、输入内容的这些显示组件。<br>&lt;input type&#x3D;”text”或者type&#x3D;”password” &#x2F;&gt;单行输入框。</p>
 <textarea></textarea>多行输入框。我其实很奇怪，为什么这个多行的文本框不能直接不成对了，直接一个斜线。成对之后中间能填写什么呢？填完之后是文字到了框里面。。。那么为什么<input>不能填写呢？这是个设计问题吗？
 
 <p>复选框<input type="checkbox" value="" />就是都可以勾选<br>单选按钮<input type="radio" value="" />只能勾选其一<br>而且value体现不在网页文字上，不是想象中会在勾选框后面出现一条文字，文字都是自己<p></p>加进去的。</p>
-<p>下拉菜单<br><select><br>    <option value="1">选项1</option><br>    <option value="2">选项2</option><br></select><br>这个value好像也没有顺序上的作用，难道是选择了之后是后台的变量名？</p>
-<p>提交按钮：<input type="submit" id="" name="" value="提交"/>这个是实实在在的有一个按钮出来，然后上面写着value里面的文字。</p>
+<p>下拉菜单</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;select&gt;</span><br><span class="line">	&lt;option value=&quot;1&quot;&gt;选项1&lt;/option&gt;</span><br><span class="line">	&lt;option value=&quot;2&quot;&gt;选项2&lt;/option&gt;</span><br><span class="line">&lt;/select&gt;</span><br></pre></td></tr></table></figure>
+<p>这个value好像也没有顺序上的作用，难道是选择了之后是后台的变量名？</p>
+<p>提交按钮：<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;input type=&quot;submit&quot; id=&quot;&quot; name=&quot;&quot; value=&quot;提交&quot;/&gt;</span><br></pre></td></tr></table></figure>这个是实实在在的有一个按钮出来，然后上面写着value里面的文字。</p>
 <p>然后最后我尝试了一下，没有这个<form></form>结构，好像也不会报错。这大概就是所谓的规范吧。<br>ok，结束。</p>
 
       
