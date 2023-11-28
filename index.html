@@ -73,6 +73,75 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-2023-11-23-网页学习-推进五-HTML5" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2023/11/23/2023-11-23-%E7%BD%91%E9%A1%B5%E5%AD%A6%E4%B9%A0-%E6%8E%A8%E8%BF%9B%E4%BA%94-HTML5/" class="article-date">
+  <time class="dt-published" datetime="2023-11-23T04:24:03.000Z" itemprop="datePublished">2023-11-23</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2023/11/23/2023-11-23-%E7%BD%91%E9%A1%B5%E5%AD%A6%E4%B9%A0-%E6%8E%A8%E8%BF%9B%E4%BA%94-HTML5/">网页学习-推进五-HTML5</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>闲聊——<br>我不太清楚自己是从什么时候开始要学习网页的了，大概2周左右了。<br>我想明白了，既然我现在的目标是写一个能够减轻自己负担的B-S办公系统，那主要目标就要集中在上面，电子类的创客想法（也就是事件提醒器）先暂时放一放。虽然感觉制作网页很枯燥很难以捉摸，但是一旦自己完成了一个项目，大概就会好起来的。</p>
+<p>今天将进行到第五章：HTML5<br>一、HTML5基础<br>下面会先自己看学习，然后把不熟悉的摘出来。<br>1.具有布尔值的属性，比如disabled 和 readonly，true的情况是：只写属性名不写值、写&#x3D;””、写属性名&#x3D;”属性名”；false的情况是，连这个属性名都不要写。<br>2.html5可以省略很多标签。比如body，html等<br>3.直接</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;meta charset=&quot;utf-8&quot;&gt;</span><br></pre></td></tr></table></figure>
+<p>就可以了。<br>4.</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;br/&gt; 相当于回车符号</span><br></pre></td></tr></table></figure>
+
+<p>二、HTML5元素<br>内嵌、流、标题、交互、元数据、短语，推崇表现和内容分离，必使用CSS定义样式。<br>1.新增加的语义化标记</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;header&gt;页面中的头部区域</span><br><span class="line">&lt;footer&gt;页面中的脚部区域</span><br><span class="line">&lt;section&gt;web页面中的某一块区域</span><br><span class="line">&lt;article&gt;独立的文章内容</span><br><span class="line">&lt;aside&gt;相关的内容或引文</span><br><span class="line">&lt;nav&gt;导航类辅助内容</span><br></pre></td></tr></table></figure>
+<p>2.不再支持frame框架，只支持iframe，废除frameset、frame、noframes三个元素。</p>
+<p>三、HTML5的全局属性<br>1.可编辑属性：contentEditable<br>当这个属性为true时，直接在web页面中就可以进行编辑，但是保存的话需要发送innerHTML到服务器端。<br>2.页面可编辑属性：designMode，有了它之后，页面中contentEditable为false的属性也可以编辑了。<br>有两个状态：on和off，使用Javascript脚本进行指定：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">document.designMode=&quot;on&quot;</span><br></pre></td></tr></table></figure>
+<p>3.不可见属性：hidden<br>4.拼写检查属性：spellcheck，它的特点在于必须声明true或者false，不能利用html5的方式简写。和input中的text类型或者textaera元素一起使用。<br>5.使用tab键来移动焦点：tabindex属性，值设置为1 2 3这样。</p>
+<p>四、HTML5的文档结构<br>最简单的文档结构，html5的：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html&gt;</span><br><span class="line">	&lt;head&gt;&lt;/head&gt;</span><br><span class="line">	&lt;body&gt;&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
+
+<p>五、HTML5元素分类<br>结构性元素、级块性元素、行内语义性元素、交互性元素<br>1.结构性元素包括：<br>section、header、footer、nav、article<br>2.级块性元素：<br>aside、figure（对多个元素进行组合并展示的元素）、code、dialog（对话，dt和dd）<br>3.行内语义元素：<br>meter（特定范围内的数值）、time、progress（进度条）、video、audio<br>4.交互性元素<br>用于功能性的内容表达，内容和数据的关联。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;details&gt;表示具体的内容，比如单击之后就可以显示详细信息。</span><br><span class="line">&lt;datagrid&gt;控制客户端显示，可以通过脚本动态更新。</span><br><span class="line">&lt;menu&gt;菜单</span><br><span class="line">&lt;command&gt;用来处理命令按钮。</span><br></pre></td></tr></table></figure>
+
+<p>六、看看如何进行结构设计</p>
+<ol>
+<li>article<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;article&gt;是一个完整且独立的文章结构，可以包括&lt;header&gt;、主体、&lt;footer&gt;(可以放入引用来源)。而且可以进行&lt;article&gt;的嵌套。比如评论中使用&lt;article&gt;结构。</span><br></pre></td></tr></table></figure></li>
+<li>section<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;section&gt;主要是为了分段。而且&lt;section&gt;中必须一定要包含标题，比如&lt;h1&gt;。可以和&lt;article&gt;互相嵌套。就我自己的感觉来说，它里面的东西注重一定的分隔性，可以从外部调用，语义方面比较多一些。但是&lt;section&gt;之间是有关联的，有别于独立程度较高的&lt;article&gt;。而且它代替不了&lt;div&gt;。&lt;div&gt;的主要作用是页面的分块设计。</span><br></pre></td></tr></table></figure></li>
+<li>nav<br>顾名思义，导航链接组，但是可以有多种展示形式。比如底部、侧边推荐、页内的不同部分跳转、导航条、翻页中的那个12345678<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;nav&gt;</span><br><span class="line">	&lt;ul&gt;</span><br><span class="line">		&lt;li&gt;&lt;a href=&quot;/&quot;&gt;主页&lt;/a&gt;&lt;/li&gt;</span><br><span class="line">		&lt;li&gt;&lt;a href=&quot;/blog&quot;&gt;博客&lt;/a&gt;&lt;/li&gt;</span><br><span class="line">	&lt;/ul&gt;</span><br><span class="line">&lt;/nav&gt;</span><br></pre></td></tr></table></figure></li>
+<li>aside，作为一种主要内容的补充。比如广告、名词解释等等。<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;time datetime=&quot;2014-5-27T20:00Z&quot; pubdate&gt;&lt;/time&gt; </span><br><span class="line">pubdate负责告诉引擎那个才是真正的发布时间。</span><br></pre></td></tr></table></figure></li>
+</ol>
+<p>七、关于HTML5的语义模块</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;header&gt; &lt;footer&gt; &lt;hgroup&gt;给标题分组 &lt;address&gt;定义联系信息</span><br></pre></td></tr></table></figure>
+
+<p>八、实践<br>显示编排指的就是有section，隐式就是不怎么用section。<br>当然推荐显示了。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2023/11/23/2023-11-23-%E7%BD%91%E9%A1%B5%E5%AD%A6%E4%B9%A0-%E6%8E%A8%E8%BF%9B%E4%BA%94-HTML5/" data-id="clpi4vvu70000sqw8afd08ghu" data-title="网页学习-推进五-HTML5" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/HTML5/" rel="tag">HTML5</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/html/" rel="tag">html</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E7%BD%91%E9%A1%B5%E5%AD%A6%E4%B9%A0/" rel="tag">网页学习</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E9%97%B2%E8%81%8A/" rel="tag">闲聊</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
     <article id="post-2023-11-21-网页HTML进度四-推进实践" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/2023/11/21/2023-11-21-%E7%BD%91%E9%A1%B5HTML%E8%BF%9B%E5%BA%A6%E5%9B%9B-%E6%8E%A8%E8%BF%9B%E5%AE%9E%E8%B7%B5/" class="article-date">
@@ -481,50 +550,6 @@
 
 
   
-    <article id="post-2023-03-27-JAVA零基础-入门" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2023/03/27/2023-03-27-JAVA%E9%9B%B6%E5%9F%BA%E7%A1%80-%E5%85%A5%E9%97%A8/" class="article-date">
-  <time class="dt-published" datetime="2023-03-27T09:07:52.000Z" itemprop="datePublished">2023-03-27</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2023/03/27/2023-03-27-JAVA%E9%9B%B6%E5%9F%BA%E7%A1%80-%E5%85%A5%E9%97%A8/">JAVA零基础-入门</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <p>在CSDN上随便找了一入门的JAVA课程，节数还是可以接受的，没有九九八十一节的那种。<br>1.先讲一些历史：<br>————三个版本：<br>J2SE、基础版本，做一些桌面软件  java1.5后，为 java se<br>J2ME、移动版，现在淘汰了已经，现在是安卓&#x2F;ios  java1.5后，为 java me<br>J2EE、企业版，可以做一些大型的系统，大型网站  java1.5后，为 java ee，然后2018年改称Jakarta EE</p>
-<p>————版本：<br>1.1 1.2 1.3 1.4 直到java1.5,改动比较大<br>之后都是JAVA5 JAVA6 JAVA7 JAVA8（主流） …2018年后每半年更新一次</p>
-<p>2.介绍JAVA特点：<br>————跨平台语言，就是给不同的操作系统（平台）写程序，只要写一个就可以了，都是兼容的。一次编写，处处运行。<br>？为什么？：在操作系统上安装了一个JVM（java的虚拟机），有各种类型的JVM，所以JAVA在JVM上运行就不会存在跨平台了。<br>因此运行java程序的流程：<br>开发语言（写代码，java）-》编译（class）-》执行class</p>
-<p>3.JVM：java虚拟机<br>jre相当于：JVM + 核心类库   —只能运行java，但不能开发<br>jdk相当于：jre + 运行环境工具   —运行+开发。用它就ok</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2023/03/27/2023-03-27-JAVA%E9%9B%B6%E5%9F%BA%E7%A1%80-%E5%85%A5%E9%97%A8/" data-id="cloxp6tds000s8ww872bv2fka" data-title="JAVA零基础-入门" class="article-share-link"><span class="fa fa-share">Share</span></a>
-      
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JAVA/" rel="tag">JAVA</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%85%A5%E9%97%A8/" rel="tag">入门</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
 
 
   <nav id="page-nav">
@@ -543,7 +568,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tags</h3>
     <div class="widget">
-      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/C%E5%9F%BA%E7%A1%80/" rel="tag">C基础</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/C%E8%AF%AD%E8%A8%80/" rel="tag">C语言</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/DNS%E5%88%B7%E6%96%B0/" rel="tag">DNS刷新</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/HTML/" rel="tag">HTML</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JAVA/" rel="tag">JAVA</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/MDN/" rel="tag">MDN</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/XHTML/" rel="tag">XHTML</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/object-Object/" rel="tag">[object Object]</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/debug/" rel="tag">debug</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/github/" rel="tag">github</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/goto/" rel="tag">goto</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/" rel="tag">hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/html/" rel="tag">html</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ij/" rel="tag">ij</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/leetcode/" rel="tag">leetcode</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/meta/" rel="tag">meta</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E4%BD%BF%E7%94%A8%E5%BF%83%E5%BE%97/" rel="tag">使用心得</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%85%83%E4%BF%A1%E6%81%AF/" rel="tag">元信息</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%85%A5%E9%97%A8/" rel="tag">入门</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%87%BD%E6%95%B0/" rel="tag">函数</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%88%A4%E6%96%AD/" rel="tag">判断</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%8D%9A%E5%AE%A2/" rel="tag">博客</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%9F%BA%E7%A1%80%E8%A1%A5%E5%B7%AE/" rel="tag">基础补差</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%AD%97%E7%AC%A6/" rel="tag">字符</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%AE%89%E8%A3%85/" rel="tag">安装</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%B1%9E%E6%80%A7/" rel="tag">属性</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%BE%AA%E7%8E%AF/" rel="tag">循环</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%8C%89%E7%85%A7%E6%95%99%E7%A8%8B%E5%BC%8F%E7%9A%84%E5%AD%A6%E4%B9%A0/" rel="tag">按照教程式的学习</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%95%B0%E7%BB%84/" rel="tag">数组</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%97%A5%E8%AE%B0/" rel="tag">日记</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%B5%AE%E7%82%B9/" rel="tag">浮点</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%AE%97%E6%B3%95%E4%B8%8D%E4%B8%80%E5%AE%9A%E5%92%8C%E4%BA%BA%E7%9A%84%E6%80%9D%E8%80%83%E6%96%B9%E5%BC%8F%E7%9B%B8%E5%90%8C/" rel="tag">算法不一定和人的思考方式相同</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2/" rel="tag">类型转换</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%BB%83%E4%B9%A0%E9%A2%98/" rel="tag">练习题</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%BD%91%E9%A1%B5/" rel="tag">网页</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%BD%91%E9%A1%B5%E5%88%B6%E4%BD%9C/" rel="tag">网页制作</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%BD%91%E9%A1%B5%E5%88%B6%E4%BD%9C%E5%85%A5%E9%97%A8/" rel="tag">网页制作入门</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%87%AA%E9%A1%B6%E5%90%91%E4%B8%8B%E6%96%B9%E6%B3%95/" rel="tag">自顶向下方法</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%A1%A5%E7%A0%81/" rel="tag">补码</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/" rel="tag">计算机网络</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%BE%97%E8%BD%AC%E7%9B%B8%E9%99%A4%E6%B3%95/" rel="tag">辗转相除法</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%BF%90%E7%AE%97%E7%AC%A6/" rel="tag">运算符</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%85%8D%E7%BD%AE/" rel="tag">配置</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%97%B2%E8%81%8A/" rel="tag">闲聊</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%A2%84%E5%85%88%E8%AE%BE%E7%BD%AE%E5%86%8D%E5%88%A4%E6%96%AD/" rel="tag">预先设置再判断</a></li></ul>
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/C%E5%9F%BA%E7%A1%80/" rel="tag">C基础</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/C%E8%AF%AD%E8%A8%80/" rel="tag">C语言</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/DNS%E5%88%B7%E6%96%B0/" rel="tag">DNS刷新</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/HTML/" rel="tag">HTML</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/HTML5/" rel="tag">HTML5</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JAVA/" rel="tag">JAVA</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/MDN/" rel="tag">MDN</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/XHTML/" rel="tag">XHTML</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/object-Object/" rel="tag">[object Object]</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/debug/" rel="tag">debug</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/github/" rel="tag">github</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/goto/" rel="tag">goto</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/" rel="tag">hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/html/" rel="tag">html</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ij/" rel="tag">ij</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/leetcode/" rel="tag">leetcode</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/meta/" rel="tag">meta</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E4%BD%BF%E7%94%A8%E5%BF%83%E5%BE%97/" rel="tag">使用心得</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%85%83%E4%BF%A1%E6%81%AF/" rel="tag">元信息</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%85%A5%E9%97%A8/" rel="tag">入门</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%87%BD%E6%95%B0/" rel="tag">函数</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%88%A4%E6%96%AD/" rel="tag">判断</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%8D%9A%E5%AE%A2/" rel="tag">博客</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%9F%BA%E7%A1%80%E8%A1%A5%E5%B7%AE/" rel="tag">基础补差</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%AD%97%E7%AC%A6/" rel="tag">字符</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%AE%89%E8%A3%85/" rel="tag">安装</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%B1%9E%E6%80%A7/" rel="tag">属性</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%BE%AA%E7%8E%AF/" rel="tag">循环</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%8C%89%E7%85%A7%E6%95%99%E7%A8%8B%E5%BC%8F%E7%9A%84%E5%AD%A6%E4%B9%A0/" rel="tag">按照教程式的学习</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%95%B0%E7%BB%84/" rel="tag">数组</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%97%A5%E8%AE%B0/" rel="tag">日记</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%B5%AE%E7%82%B9/" rel="tag">浮点</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%AE%97%E6%B3%95%E4%B8%8D%E4%B8%80%E5%AE%9A%E5%92%8C%E4%BA%BA%E7%9A%84%E6%80%9D%E8%80%83%E6%96%B9%E5%BC%8F%E7%9B%B8%E5%90%8C/" rel="tag">算法不一定和人的思考方式相同</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2/" rel="tag">类型转换</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%BB%83%E4%B9%A0%E9%A2%98/" rel="tag">练习题</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%BD%91%E9%A1%B5/" rel="tag">网页</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%BD%91%E9%A1%B5%E5%88%B6%E4%BD%9C/" rel="tag">网页制作</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%BD%91%E9%A1%B5%E5%88%B6%E4%BD%9C%E5%85%A5%E9%97%A8/" rel="tag">网页制作入门</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%BD%91%E9%A1%B5%E5%AD%A6%E4%B9%A0/" rel="tag">网页学习</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%87%AA%E9%A1%B6%E5%90%91%E4%B8%8B%E6%96%B9%E6%B3%95/" rel="tag">自顶向下方法</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%A1%A5%E7%A0%81/" rel="tag">补码</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/" rel="tag">计算机网络</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%BE%97%E8%BD%AC%E7%9B%B8%E9%99%A4%E6%B3%95/" rel="tag">辗转相除法</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%BF%90%E7%AE%97%E7%AC%A6/" rel="tag">运算符</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%85%8D%E7%BD%AE/" rel="tag">配置</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%97%B2%E8%81%8A/" rel="tag">闲聊</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%A2%84%E5%85%88%E8%AE%BE%E7%BD%AE%E5%86%8D%E5%88%A4%E6%96%AD/" rel="tag">预先设置再判断</a></li></ul>
     </div>
   </div>
 
@@ -553,7 +578,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/tags/C%E5%9F%BA%E7%A1%80/" style="font-size: 20px;">C基础</a> <a href="/tags/C%E8%AF%AD%E8%A8%80/" style="font-size: 12px;">C语言</a> <a href="/tags/DNS%E5%88%B7%E6%96%B0/" style="font-size: 10px;">DNS刷新</a> <a href="/tags/HTML/" style="font-size: 16px;">HTML</a> <a href="/tags/JAVA/" style="font-size: 12px;">JAVA</a> <a href="/tags/MDN/" style="font-size: 10px;">MDN</a> <a href="/tags/XHTML/" style="font-size: 10px;">XHTML</a> <a href="/tags/object-Object/" style="font-size: 10px;">[object Object]</a> <a href="/tags/debug/" style="font-size: 10px;">debug</a> <a href="/tags/github/" style="font-size: 10px;">github</a> <a href="/tags/goto/" style="font-size: 10px;">goto</a> <a href="/tags/hexo/" style="font-size: 14px;">hexo</a> <a href="/tags/html/" style="font-size: 14px;">html</a> <a href="/tags/ij/" style="font-size: 10px;">ij</a> <a href="/tags/leetcode/" style="font-size: 10px;">leetcode</a> <a href="/tags/meta/" style="font-size: 10px;">meta</a> <a href="/tags/%E4%BD%BF%E7%94%A8%E5%BF%83%E5%BE%97/" style="font-size: 10px;">使用心得</a> <a href="/tags/%E5%85%83%E4%BF%A1%E6%81%AF/" style="font-size: 10px;">元信息</a> <a href="/tags/%E5%85%A5%E9%97%A8/" style="font-size: 14px;">入门</a> <a href="/tags/%E5%87%BD%E6%95%B0/" style="font-size: 10px;">函数</a> <a href="/tags/%E5%88%A4%E6%96%AD/" style="font-size: 10px;">判断</a> <a href="/tags/%E5%8D%9A%E5%AE%A2/" style="font-size: 12px;">博客</a> <a href="/tags/%E5%9F%BA%E7%A1%80%E8%A1%A5%E5%B7%AE/" style="font-size: 10px;">基础补差</a> <a href="/tags/%E5%AD%97%E7%AC%A6/" style="font-size: 10px;">字符</a> <a href="/tags/%E5%AE%89%E8%A3%85/" style="font-size: 10px;">安装</a> <a href="/tags/%E5%B1%9E%E6%80%A7/" style="font-size: 10px;">属性</a> <a href="/tags/%E5%BE%AA%E7%8E%AF/" style="font-size: 12px;">循环</a> <a href="/tags/%E6%8C%89%E7%85%A7%E6%95%99%E7%A8%8B%E5%BC%8F%E7%9A%84%E5%AD%A6%E4%B9%A0/" style="font-size: 10px;">按照教程式的学习</a> <a href="/tags/%E6%95%B0%E7%BB%84/" style="font-size: 12px;">数组</a> <a href="/tags/%E6%97%A5%E8%AE%B0/" style="font-size: 10px;">日记</a> <a href="/tags/%E6%B5%AE%E7%82%B9/" style="font-size: 10px;">浮点</a> <a href="/tags/%E7%AE%97%E6%B3%95%E4%B8%8D%E4%B8%80%E5%AE%9A%E5%92%8C%E4%BA%BA%E7%9A%84%E6%80%9D%E8%80%83%E6%96%B9%E5%BC%8F%E7%9B%B8%E5%90%8C/" style="font-size: 10px;">算法不一定和人的思考方式相同</a> <a href="/tags/%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2/" style="font-size: 10px;">类型转换</a> <a href="/tags/%E7%BB%83%E4%B9%A0%E9%A2%98/" style="font-size: 10px;">练习题</a> <a href="/tags/%E7%BD%91%E9%A1%B5/" style="font-size: 14px;">网页</a> <a href="/tags/%E7%BD%91%E9%A1%B5%E5%88%B6%E4%BD%9C/" style="font-size: 10px;">网页制作</a> <a href="/tags/%E7%BD%91%E9%A1%B5%E5%88%B6%E4%BD%9C%E5%85%A5%E9%97%A8/" style="font-size: 10px;">网页制作入门</a> <a href="/tags/%E8%87%AA%E9%A1%B6%E5%90%91%E4%B8%8B%E6%96%B9%E6%B3%95/" style="font-size: 10px;">自顶向下方法</a> <a href="/tags/%E8%A1%A5%E7%A0%81/" style="font-size: 10px;">补码</a> <a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/" style="font-size: 10px;">计算机网络</a> <a href="/tags/%E8%BE%97%E8%BD%AC%E7%9B%B8%E9%99%A4%E6%B3%95/" style="font-size: 10px;">辗转相除法</a> <a href="/tags/%E8%BF%90%E7%AE%97%E7%AC%A6/" style="font-size: 10px;">运算符</a> <a href="/tags/%E9%85%8D%E7%BD%AE/" style="font-size: 10px;">配置</a> <a href="/tags/%E9%97%B2%E8%81%8A/" style="font-size: 18px;">闲聊</a> <a href="/tags/%E9%A2%84%E5%85%88%E8%AE%BE%E7%BD%AE%E5%86%8D%E5%88%A4%E6%96%AD/" style="font-size: 10px;">预先设置再判断</a>
+      <a href="/tags/C%E5%9F%BA%E7%A1%80/" style="font-size: 20px;">C基础</a> <a href="/tags/C%E8%AF%AD%E8%A8%80/" style="font-size: 12px;">C语言</a> <a href="/tags/DNS%E5%88%B7%E6%96%B0/" style="font-size: 10px;">DNS刷新</a> <a href="/tags/HTML/" style="font-size: 16px;">HTML</a> <a href="/tags/HTML5/" style="font-size: 10px;">HTML5</a> <a href="/tags/JAVA/" style="font-size: 12px;">JAVA</a> <a href="/tags/MDN/" style="font-size: 10px;">MDN</a> <a href="/tags/XHTML/" style="font-size: 10px;">XHTML</a> <a href="/tags/object-Object/" style="font-size: 10px;">[object Object]</a> <a href="/tags/debug/" style="font-size: 10px;">debug</a> <a href="/tags/github/" style="font-size: 10px;">github</a> <a href="/tags/goto/" style="font-size: 10px;">goto</a> <a href="/tags/hexo/" style="font-size: 14px;">hexo</a> <a href="/tags/html/" style="font-size: 16px;">html</a> <a href="/tags/ij/" style="font-size: 10px;">ij</a> <a href="/tags/leetcode/" style="font-size: 10px;">leetcode</a> <a href="/tags/meta/" style="font-size: 10px;">meta</a> <a href="/tags/%E4%BD%BF%E7%94%A8%E5%BF%83%E5%BE%97/" style="font-size: 10px;">使用心得</a> <a href="/tags/%E5%85%83%E4%BF%A1%E6%81%AF/" style="font-size: 10px;">元信息</a> <a href="/tags/%E5%85%A5%E9%97%A8/" style="font-size: 14px;">入门</a> <a href="/tags/%E5%87%BD%E6%95%B0/" style="font-size: 10px;">函数</a> <a href="/tags/%E5%88%A4%E6%96%AD/" style="font-size: 10px;">判断</a> <a href="/tags/%E5%8D%9A%E5%AE%A2/" style="font-size: 12px;">博客</a> <a href="/tags/%E5%9F%BA%E7%A1%80%E8%A1%A5%E5%B7%AE/" style="font-size: 10px;">基础补差</a> <a href="/tags/%E5%AD%97%E7%AC%A6/" style="font-size: 10px;">字符</a> <a href="/tags/%E5%AE%89%E8%A3%85/" style="font-size: 10px;">安装</a> <a href="/tags/%E5%B1%9E%E6%80%A7/" style="font-size: 10px;">属性</a> <a href="/tags/%E5%BE%AA%E7%8E%AF/" style="font-size: 12px;">循环</a> <a href="/tags/%E6%8C%89%E7%85%A7%E6%95%99%E7%A8%8B%E5%BC%8F%E7%9A%84%E5%AD%A6%E4%B9%A0/" style="font-size: 10px;">按照教程式的学习</a> <a href="/tags/%E6%95%B0%E7%BB%84/" style="font-size: 12px;">数组</a> <a href="/tags/%E6%97%A5%E8%AE%B0/" style="font-size: 10px;">日记</a> <a href="/tags/%E6%B5%AE%E7%82%B9/" style="font-size: 10px;">浮点</a> <a href="/tags/%E7%AE%97%E6%B3%95%E4%B8%8D%E4%B8%80%E5%AE%9A%E5%92%8C%E4%BA%BA%E7%9A%84%E6%80%9D%E8%80%83%E6%96%B9%E5%BC%8F%E7%9B%B8%E5%90%8C/" style="font-size: 10px;">算法不一定和人的思考方式相同</a> <a href="/tags/%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2/" style="font-size: 10px;">类型转换</a> <a href="/tags/%E7%BB%83%E4%B9%A0%E9%A2%98/" style="font-size: 10px;">练习题</a> <a href="/tags/%E7%BD%91%E9%A1%B5/" style="font-size: 14px;">网页</a> <a href="/tags/%E7%BD%91%E9%A1%B5%E5%88%B6%E4%BD%9C/" style="font-size: 10px;">网页制作</a> <a href="/tags/%E7%BD%91%E9%A1%B5%E5%88%B6%E4%BD%9C%E5%85%A5%E9%97%A8/" style="font-size: 10px;">网页制作入门</a> <a href="/tags/%E7%BD%91%E9%A1%B5%E5%AD%A6%E4%B9%A0/" style="font-size: 10px;">网页学习</a> <a href="/tags/%E8%87%AA%E9%A1%B6%E5%90%91%E4%B8%8B%E6%96%B9%E6%B3%95/" style="font-size: 10px;">自顶向下方法</a> <a href="/tags/%E8%A1%A5%E7%A0%81/" style="font-size: 10px;">补码</a> <a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/" style="font-size: 10px;">计算机网络</a> <a href="/tags/%E8%BE%97%E8%BD%AC%E7%9B%B8%E9%99%A4%E6%B3%95/" style="font-size: 10px;">辗转相除法</a> <a href="/tags/%E8%BF%90%E7%AE%97%E7%AC%A6/" style="font-size: 10px;">运算符</a> <a href="/tags/%E9%85%8D%E7%BD%AE/" style="font-size: 10px;">配置</a> <a href="/tags/%E9%97%B2%E8%81%8A/" style="font-size: 18px;">闲聊</a> <a href="/tags/%E9%A2%84%E5%85%88%E8%AE%BE%E7%BD%AE%E5%86%8D%E5%88%A4%E6%96%AD/" style="font-size: 10px;">预先设置再判断</a>
     </div>
   </div>
 
@@ -575,6 +600,10 @@
       <ul>
         
           <li>
+            <a href="/2023/11/23/2023-11-23-%E7%BD%91%E9%A1%B5%E5%AD%A6%E4%B9%A0-%E6%8E%A8%E8%BF%9B%E4%BA%94-HTML5/">网页学习-推进五-HTML5</a>
+          </li>
+        
+          <li>
             <a href="/2023/11/21/2023-11-21-%E7%BD%91%E9%A1%B5HTML%E8%BF%9B%E5%BA%A6%E5%9B%9B-%E6%8E%A8%E8%BF%9B%E5%AE%9E%E8%B7%B5/">网页HTML进度四-推进实践</a>
           </li>
         
@@ -588,10 +617,6 @@
         
           <li>
             <a href="/2023/11/21/2023-11-21-%E7%BD%91%E9%A1%B5%E5%AD%A6%E4%B9%A0%E8%BF%9B%E5%BA%A6%E4%BA%8C-%E6%9D%A5%E8%87%AA%E6%B7%B1%E5%A4%9C%E5%A4%B1%E7%9C%A0%E7%9A%84%E5%BC%80%E5%A7%8B/">网页学习进度二-来自深夜失眠的开始</a>
-          </li>
-        
-          <li>
-            <a href="/2023/11/14/2023-11-14-%E7%BD%91%E9%A1%B5%EF%BC%9Ahtml%E5%9F%BA%E7%A1%80/">网页：html基础</a>
           </li>
         
       </ul>
